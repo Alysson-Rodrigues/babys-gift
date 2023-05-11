@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cartoon-button {
+  border: none;
+  box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Make the border have a padding to the buttons border*/
+.cartoon-button {
+  border: 5px dashed white;
+}
+
+.ask {
+  color: white;
+  border: 5px dashed white;
+}
+
+.cartoon-button:hover {
+  transform: translateY(1px);
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.2);
+}

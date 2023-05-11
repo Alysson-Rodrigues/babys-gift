@@ -1,0 +1,36 @@
+version: '1.0'
+
+services:
+  db:
+    image: postgres:15.2-alpine3.17
+    restart: always
+    environment:
+      POSTGRES_USER: carol-gift
+      POSTGRES_PASSWORD: carol-gift
+      POSTGRES_DB: carol-gift
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - network
+
+  app:
+    build: .
+    restart: always
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_NAME: carol-gift
+      DB_USER: carol-gift
+      DB_PASSWORD: carol-gift
+    ports:
+      - "3000:3000"
+    networks:
+      - network
+
+volumes:
+  db_data:
+
+networks:
+  network:
+    driver: bridge
