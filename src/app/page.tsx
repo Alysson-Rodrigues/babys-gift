@@ -5,7 +5,7 @@ import SpotifyFrame from "./components/SpotifyFrame"
 export default function Home() {
   return (
 
-    <main className="flex min-h-screen flex-col items-center p-24" style={
+    <main className="flex h-full w-full flex-col items-center p-4 lg:h-screen" style={
       {
         backgroundImage: "url('/images/bg.png')",
         backgroundSize: 'cover',
@@ -14,9 +14,9 @@ export default function Home() {
       }
     }>
       <div className="flex flex-col bg-[#441757] p-4 mb-4 ask items-center justify-center">
-        <h1 className="text-6xl font-bold text-white  text-center">Musiquinha,vamo?😊❤️</h1>
+        <h1 className="text-xl font-bold text-white  text-center">Musiquinha,vamo?😊❤️</h1>
       </div>
-      <div className="flex flex-col max-w-[50%] bg-[#441757] p-4 ask items-center justify-center">
+      <div className="flex flex-col bg-[#441757] p-4 ask items-center justify-center">
         <h2 className="text-xl font-bold text-white  text-center">Carol, você me faz bem desde o dia 1, até hj... obrigado por existir e ser você❤️ Fiz essa playlist... Toda vez que uma música lembrar você, vou colocar aqui. Beijos!</h2>
       </div>
       <SpotifyFrame content='
